@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS TO DO list</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" placeholder="please enter here..." v-model="item_text">
+        <button @click="add_item">Add</button>
+        <div v-for="(item,index) in items">
+            <span v-html="item"></span>
+            <button @click="remove_item(index)">X</button>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
